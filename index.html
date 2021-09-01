@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="script.js"></script>
+        <link href="style.css" type="text/css" rel="stylesheet" /> 
+    </head>
+    <body>
+        <div class="container">
+            <form class="forms" action="#" method="post" id="details" >
+                <span id="mainTitle"><h2>Enter your details</h2></span>
+                <span>Full name : <br><input type="text" id="input_fullName" value="John Doe"></span>
+                <span>Job title  : <br><input type="text" id="input_jobTitle" value="Team manager"></span>
+                <span>Company name : <br><input type="text" id="input_company" value="Numio"></span>
+                <span>Office phone : <br><input type="text" id="input_phoneOffice" value="+33 4 12 34 56 78"></span>
+                <span>Mobile phone : <br><input type="text" id="input_phoneMobile" value="+33 6 12 34 56 78"></span>
+                <span>Email Address : <br><input type="email" id="input_email" value="jdoe@numio.eu"></span>
+                <span>Website URL : <br><input type="text" id="input_website" value="https://www.numio.eu"></span>
+                <span>Address Line 1 : <br><input type="text" id="input_adressL1" value="Numio"></span>
+                <span>Address Line 2 : <br><input type="text" id="input_adressL2" value="Espace La Forge, 3ème étage"></span>
+                <span>Address Line 3 <br><input type="text" id="input_adressL3" value="68 route de vienne"></span>
+                <span>ZIP Code & City : <br><input type="text" id="input_zipCity" value="69003 Lyon"></span>
+                <span>Personal Linkedin : <br><input type="text" id="input_linkedinPerso" value="https://wwww.linkedin.com/"></span>
+                <span>Company Linkedin : <br><input type="text" id="input_linkedinCompany" value="https://wwww.linkedin.com/"></span>
+                <span>Personal Facebook : <br><input type="text" id="input_facebookPerso" value="https://wwww.facebook.com/"></span>
+                <span>Company Facebook : <br><input type="text" id="input_facebookCompany" value="https://wwww.facebook.com/"></span>
+                <span>Personal Instagram : <br><input type="text" id="input_instagramPerso" value="https://wwww.instagram.com/"></span>
+                <span>Company Instagram : <br><input type="text" id="input_instagramCompany" value="https://wwww.instagram.com/"></span>
+                <span>Personal Twitter : <br><input type="text" id="input_twitterPerso" value="https://wwww.twitter.com/"></span>
+                <span>Company Twitter : </h4><input type="text" id="input_twitterCompany" value="https://wwww.twitter.com/"></span>
+                <span><input type="button" name="confirm" value="confirm"></span>
+            </form>
+            <div class="visualise">
+                <div class="frame">
+                    <div class="frameHeader">
+                        <span>From : <strong> You</strong></span>
+                        <span>To : <strong> Your Recipient</strong></span>
+                        <span>Subject : <strong> A very nice email signature</strong></span>
+                    </div>
+                    <div class="frameBody">
+                        Hello, <br>
+                        I'm happy to see you my new awesome email signature !!!<br>
+                        Best regards,
+
+
+                        <!-- Signature email -->
+                        <div id="emailSign">
+                            <table>
+                                <tr>
+                                    <td valign="top" halign="center">
+                                        <a id="sign_website" href="https://www.company.com/">
+                                            <img id="sign_logo" src=""width="80">
+                                        </a><br>
+                                        <a href="https://www.linkedin.com/company/" style="text-decoration:none;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="111" height="28" role="img" aria-label="LINKEDIN"><title>LINKEDIN</title><g shape-rendering="crispEdges"><rect width="111" height="28" fill="#0077b5"/></g><g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100"><image x="9" y="7" width="14" height="14" xlink:href=""/>
+                                            <text transform="scale(.1)" x="655" y="175" textLength="670" fill="#fff" font-weight="bold">LINKEDIN</text></g></svg>
+                                          </a>
+                                    </td>
+                                    <td valign="top" style="border-right:solid #0A70FF 3px; width: 15px;">
+                                    <td valign="top" style="padding-left: 15px; line-height:1.1">
+                                    <span id="sign_fullName" style="font-size:14pt; color:#0A70FF; font-weight:bold;">John Do</span><br>
+                                    <span id="sign_jobTitle" style="font-size:11pt;color:#4A4A4A;font-weight:bold">Founder &amp; CEO</span><br>
+                                    <span id="sign_company" style="font-size:11pt;color:#4A4A4A;">Company</span><br>
+                                    <br>
+                                    <span style="font-size:9pt;">
+                                      <a id="sign_phoneMobile" href="tel:+33412345678" style="color:#0A70FF;">+33 4 12 34 56 78</a><br>
+                                      <a id="sign_phoneOffice" href="tel:+33612345678" style="color:#0A70FF;">+33 6 12 34 56 78</a><br>
+                                      <a id="sign_email" href="mailto:jdoe@company.com" style="color:#0A70FF;">jdoe@company.com</a><br>
+                                      <a id="sign_website" href="https://www.company.com/" style="color:#0A70FF;">www.company.com</a><br>
+                                      <span id="sign_input_adressL1">Bâtiment la forge</span><br>
+                                      <span id="sign_input_adressL2">68 route de vienne</span><br>
+                                      <span id="sign_input_adressL3">69560 Lyon</span>
+                                    </span>
+                                  </td>
+                                </tr>
+                            </table>
+                            <br>
+                            <a href="https://www.company.com/marketing-campaign">
+                                <img src=""/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

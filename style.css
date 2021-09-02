@@ -14,19 +14,20 @@ body{
     top : 0px;
     left : 0px;
     background-color: #33475b;
-    width: 25%;
+    width: 18%;
     max-width: 450px;
     overflow-y: scroll;
+    color: #fff;
+    padding: 0 3rem;
     
 }
 
 .forms span{
     display: block;
-    padding: 1rem 3rem;
-    color: #fff;
-    font-size: 0.9rem;
+    margin: 1rem 0;
+    font-size: 1rem;
     font-weight: 600;
-    
+    color: #fff;
 }
 
 input{
@@ -37,9 +38,8 @@ input{
     border-width: 0 0 1px;
     background-color: transparent;
     line-height: 1.5;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1rem;
-    
+    font-size: 0.9rem;
+    color: #fff;
 }
 
 .visualise{

@@ -28,13 +28,22 @@ window.onload = function(){
 
 ///Transposes data entered on the template
 function Transpose(event){
-    var inputsForm = form_details.querySelectorAll("input[type=text]");
+    var inputsForm = form_details.querySelectorAll("input");
     var signElement
 
     //Transpose every txt input to the corresponding element of th template
     inputsForm.forEach(element => {
-        signElement = document.querySelector("#sign_"+element.getAttribute("id").substring(6));
-        if (signElement !== null){ signElement.innerHTML = element.value; } //Verify if element exist on template
+
+        switch(element.type){
+            case 'text':
+                signElement = document.querySelector("#sign_"+element.getAttribute("id").substring(6));
+                if (signElement !== null){ signElement.innerHTML = element.value; } //Verify if element exist on template
+
+            case 'file':
+                
+
+
+        }
     });
 }
 

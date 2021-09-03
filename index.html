@@ -30,12 +30,12 @@
                 <span>Personal Twitter : <input type="text" id="input_twitterPerso" value="https://wwww.twitter.com/"></span>
                 <span>Company Twitter : <input type="text" id="input_twitterCompany" value="https://wwww.twitter.com/"></span>
                 <h2>Upload your images</h2>
-                <span id="">Profile picture : <input type="file" id ="input_persoPict" accept="image/*" value=""></span>
-                <span id="">Company logo : <input type="file" id ="input_compaLogo" accept="image/*" value=""></span>
+                <span class="inputImg">Profile picture : <input type="file" id ="input_persoPict" accept="image/*" value=""><div class="inputReset">×</div></span>
+                <span class="inputImg">Company logo : <input type="file" id ="input_compaLogo" accept="image/*" value=""><div class="inputReset">×</div></span>
                 <h2>Select colors</h2>
-                <span id="inputColor">Primary color : <input id="primaColor" type="color" value="#0A70FF"></span>
-                <span id="inputColor">Secondary color : <input id="secondColor" type="color" value="#4A4A4A"></span>
-                <span><input type="button" name="confirm" value="confirm"></span>
+                <span class="inputColor">Primary color : <input id="primaColor" type="color" value="#0A70FF"></span>
+                <span class="inputColor">Secondary color : <input id="secondColor" type="color" value="#4A4A4A"></span>
+                <button id="confirm" type="button"> Confirm</button>
             </form>
             <div class="visualise">
                 <div class="frame">
@@ -67,13 +67,8 @@
                                     <table>
                                         <tr>
                                             <td valign="top" halign="center">
-                                                <a id="sign_website" href="https://www.company.com/">
-                                                    <img id="sign_logo" src=""width="80">
-                                                </a><br>
-                                                <a href="https://www.linkedin.com/company/" style="text-decoration:none;">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="111" height="28" role="img" aria-label="LINKEDIN"><title>LINKEDIN</title><g shape-rendering="crispEdges"><rect width="111" height="28" fill="#0077b5"/></g><g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100"><image x="9" y="7" width="14" height="14" xlink:href=""/>
-                                                    <text transform="scale(.1)" x="655" y="175" textLength="670" fill="#fff" font-weight="bold">LINKEDIN</text></g></svg>
-                                                  </a>
+                                                <img id="sign_persoPict" src="./img/defaultUser.png" style=" background-size:cover; border-radius:50%; width:80px;"  ><br>
+                                                <img id="sign_compaLogo" src="./img/defaultLogo.png" width="80"><br>
                                             </td>
                                             <td valign="top" class="primaColor" style="border-right:solid 3px; width: 15px;">
                                             <td valign="top" style="padding-left: 15px; line-height:1.1">

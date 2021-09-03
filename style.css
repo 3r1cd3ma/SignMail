@@ -79,17 +79,26 @@ iframe {
     border: none;
 }
 
-#inputColor{
+.inputColor{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-#inputColor :only-child{
+.inputColor :only-child{
     margin-left: 0.5rem;
     width: 3rem;
     border: 3px solid #fff;
     padding: 0;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.inputImg >*{
+    display: inline;
+    width: 95%;
+}
+.inputImg :last-child{
+    font-weight: 600;
     cursor: pointer;
 }

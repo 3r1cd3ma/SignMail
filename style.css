@@ -55,7 +55,7 @@ h4{margin: 20px 0 0}
 }
 .inputColor h4{margin : 0;}
 
-.inputColor :last-child{
+.inputColor input{
     margin-left: 0.5rem;
     width: 3rem;
     border: 3px solid #fff;
@@ -95,3 +95,5 @@ h4{margin: 20px 0 0}
     border-radius: 0 0 8px 8px;
     padding: 1rem 2rem;
 }
+
+#emailSign{margin-top: 10px;}

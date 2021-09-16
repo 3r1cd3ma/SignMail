@@ -1,8 +1,6 @@
 /* Variables */
 var form_details; //DOM element of the details form
 var signDOM;
-var primaColor; //Input element of primary color
-var secondColor; //Input element of secondary color
 var internCSS;
 
 /* Initialisation */
@@ -35,8 +33,6 @@ function Transpose(element){
     
     var parentElement = element.parentElement.parentElement;
     var signElement = document.querySelector("#sign_"+parentElement.id.substring(6)); //Get the corresponding template element of the current input
-
-    if (signElement == null) {return;} //Pass if element noexistent in 
 
     //Different execution according to the input type
     switch(element.type){
@@ -88,9 +84,16 @@ function Transpose(element){
         
         //Change intern CSS color values
         case "color":
-            internCSS.cssRules[0].style.color = primaColor.value;
-            internCSS.cssRules[0].style.borderColor = primaColor.value;
-            internCSS.cssRules[1].style.color = secondColor.value;
+            switch (parentElement.id){
+                case "primaColor" :
+                    internCSS.cssRules[0].style.color = element.value;
+                    internCSS.cssRules[0].style.borderColor = element.value;
+                    break;
+                case "secondColor" :
+                    internCSS.cssRules[1].style.color = element.value;
+                    break;
+            }
+
             break;
     }
 }

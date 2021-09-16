@@ -48,7 +48,23 @@ function Transpose(element){
             if (element.value == '') {signElement.hidden = 1;}
             else {signElement.hidden = 0;}
 
-            signElement.innerHTML = element.value; //Transpose text
+            //Put link if necessery
+            switch(parentElement.id){
+                case "input_website":
+                    signElement.innerHTML = '<a href="https://'+element.value+'">'+element.value+'</a>';
+                    break;
+
+                case "input_email":
+                    signElement.innerHTML = '<a href="mailto:'+element.value+'">'+element.value+'</a>';
+                    break;
+                
+                case "input_phoneMobile","input_phoneOffice":
+                    signElement.innerHTML = '<a href="tel:'+element.value+'">'+element.value+'</a>';
+                    break;
+
+                default :
+                    signElement.innerHTML = element.value; //Transpose text
+            }
             break;
 
         //Upload image
@@ -76,6 +92,5 @@ function Transpose(element){
             internCSS.cssRules[0].style.borderColor = primaColor.value;
             internCSS.cssRules[1].style.color = secondColor.value;
             break;
-
     }
 }

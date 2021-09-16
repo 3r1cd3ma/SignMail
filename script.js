@@ -6,15 +6,16 @@ var internCSS;
 /* Initialisation */
 window.onload = function(){
 
-    //Get elements
+    //Get elements after load
     form_details = document.querySelector("#details");
     signDOM = document.querySelector("#emailSign");
-    primaColor = document.querySelector("#primaColor");
-    secondColor = document.querySelector("#secondColor");
     internCSS = document.styleSheets[1];
 
-    //Listeners
-    document.querySelectorAll('input').forEach(eleminput => {eleminput.addEventListener('change',()=>{Transpose(eleminput)})});//At the changement of an input value, execute Transpose
+    document.querySelectorAll('input').forEach(eleminput => {
+        eleminput.addEventListener('change',()=>{Transpose(eleminput)}) //Add on change listener for execute Transpose function
+        Transpose(eleminput); //Execute transpose for the browser cache management with inputs save
+    });
+
     document.querySelectorAll('.inputReset').forEach(cross => { cross.addEventListener('click',() => { //At the click on every input reset cross, reset previus input
         cross.previousSibling.value=null;
         Transpose(cross.previousSibling);
@@ -33,6 +34,8 @@ function Transpose(element){
     
     var parentElement = element.parentElement.parentElement;
     var signElement = document.querySelector("#sign_"+parentElement.id.substring(6)); //Get the corresponding template element of the current input
+
+    if(element.type!='color' & signElement==null){return} //Verifies exist
 
     //Different execution according to the input type
     switch(element.type){
@@ -54,7 +57,8 @@ function Transpose(element){
                     signElement.innerHTML = '<a href="mailto:'+element.value+'">'+element.value+'</a>';
                     break;
                 
-                case "input_phoneMobile","input_phoneOffice":
+                case "input_phoneMobile":
+                case "input_phoneOffice":
                     signElement.innerHTML = '<a href="tel:'+element.value+'">'+element.value+'</a>';
                     break;
 

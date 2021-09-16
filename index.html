@@ -8,36 +8,107 @@
     <body>
         <div class="container">
             
-            <form class="forms" action="#" method="post" id="details" >
+            <span id="details" >
                 <h2>Enter your details</h2>
-                <span>Full name :<input type="text" id="input_fullName" value="John Doe"></span>
-                <span>Job title  : <input type="text" id="input_jobTitle" value="Team manager"></span>
-                <span>Company name : <input type="text" id="input_company" value="Numio"></span>
-                <span>Office phone : <input type="text" id="input_phoneOffice" value="+33 4 12 34 56 78"></span>
-                <span>Mobile phone : <input type="text" id="input_phoneMobile" value="+33 6 12 34 56 78"></span>
-                <span>Email Address : <input type="email" id="input_email" value="jdoe@numio.eu"></span>
-                <span>Website URL : <input type="text" id="input_website" value="https://www.numio.eu"></span>
-                <span>Address Line 1 : <input type="text" id="input_adressL1" value="Numio"></span>
-                <span>Address Line 2 : <input type="text" id="input_adressL2" value="Espace La Forge, 3ème étage"></span>
-                <span>Address Line 3 <input type="text" id="input_adressL3" value="68 route de vienne"></span>
-                <span>ZIP Code & City : <input type="text" id="input_zipCity" value="69003 Lyon"></span>
-                <span>Personal Linkedin : <input type="text" id="input_linkedinPerso" value="https://wwww.linkedin.com/"></span>
-                <span>Company Linkedin : <input type="text" id="input_linkedinCompany" value="https://wwww.linkedin.com/"></span>
-                <span>Personal Facebook : <input type="text" id="input_facebookPerso" value="https://wwww.facebook.com/"></span>
-                <span>Company Facebook : <input type="text" id="input_facebookCompany" value="https://wwww.facebook.com/"></span>
-                <span>Personal Instagram : <input type="text" id="input_instagramPerso" value="https://wwww.instagram.com/"></span>
-                <span>Company Instagram : <input type="text" id="input_instagramCompany" value="https://wwww.instagram.com/"></span>
-                <span>Personal Twitter : <input type="text" id="input_twitterPerso" value="https://wwww.twitter.com/"></span>
-                <span>Company Twitter : <input type="text" id="input_twitterCompany" value="https://wwww.twitter.com/"></span>
+                <div id="input_fullName">
+                    <h4>Full name :</h4>
+                    <div class="inputDetail"><input type="text" value="John Doe"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_jobTitle">
+                    <h4>Job title  :</h4>
+                    <div class="inputDetail"><input type="text" value="Founder & CEO"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_company">
+                    <h4>Company name :</h4>
+                    <div class="inputDetail"><input type="text" value="Company"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_phoneMobile">
+                    <h4>Mobile phone :</h4>
+                    <div class="inputDetail"><input type="text" value="+33 6 12 34 56 78"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_phoneOffice">
+                    <h4>Office phone :</h4>
+                    <div class="inputDetail"><input type="text" value="+33 4 12 34 56 78"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_email">
+                    <h4>Email Address :</h4>
+                    <div class="inputDetail"><input type="email" value="jdoe@company.com"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_website">
+                    <h4>Website URL :</h4>
+                    <div class="inputDetail"><input type="text" value="https://www.company.eu"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_adressL1">
+                    <h4>Address Line 1 :</h4>
+                    <div class="inputDetail"><input type="text" value="Bâtiment la forge"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_adressL2">
+                    <h4>Address Line 2 :</h4>
+                    <div class="inputDetail"><input type="text" value="3ème étage"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_adressL3">
+                    <h4>Address Line 3</h4>
+                    <div class="inputDetail"><input type="text" value="68 route de vienne"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_zipCity">
+                    <h4>ZIP Code & City :</h4>
+                    <div class="inputDetail"><input type="text" value="69560 Lyon"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_linkedinPerso">
+                    <h4>Personal Linkedin :</h4>
+                    <div class="inputDetail"><input type="text" value="https://wwww.linkedin.com/"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_linkedinCompany">
+                    <h4>Company Linkedin :</h4>
+                    <div class="inputDetail"><input type="text" value="https://wwww.linkedin.com/"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_facebookPerso">
+                    <h4>Personal Facebook :</h4>
+                    <div class="inputDetail"><input type="text" value="https://wwww.facebook.com/"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_facebookCompany">
+                    <h4>Company Facebook :</h4>
+                    <div class="inputDetail"><input type="text" value="https://wwww.facebook.com/"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_instagramPerso">
+                    <h4>Personal Instagram :</h4>
+                    <div class="inputDetail"><input type="text" value="https://wwww.instagram.com/"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_instagramCompany">
+                    <h4>Company Instagram :</h4>
+                    <div class="inputDetail"><input type="text" value="https://wwww.instagram.com/"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_twitterPerso">
+                    <h4>Personal Twitter :</h4>
+                    <div class="inputDetail"><input type="text" value="https://wwww.twitter.com/"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_twitterCompany">
+                    <h4>Company Twitter :</h4>
+                    <div class="inputDetail"><input type="text" value="https://wwww.twitter.com/"><span class="inputReset">×</span></div>
+                </div>
+
                 <h2>Upload your images</h2>
-                <span class="inputImg">Profile picture : <input type="file" id ="input_persoPict" accept="image/*" value=""><div class="inputReset">×</div></span>
-                <span class="inputImg">Company logo : <input type="file" id ="input_compaLogo" accept="image/*" value=""><div class="inputReset">×</div></span>
+                <div id ="input_persoPict" >
+                    <h4>Profile picture :</h4>
+                    <div class="inputDetail"><input type="file" accept="image/*" value="./img/default_user.png"><span class="inputReset">×</span></div>
+                </div>
+                <div id ="input_compaLogo">
+                    <h4>Company logo :</h4>
+                    <div class="inputDetail"><input type="file" accept="image/*" value="./img/default_logo.png"><span class="inputReset">×</span></div>
+                </div>
+
                 <h2>Select colors</h2>
-                <span class="inputColor">Primary color : <input id="primaColor" type="color" value="#0A70FF"></span>
-                <span class="inputColor">Secondary color : <input id="secondColor" type="color" value="#4A4A4A"></span>
-                <button id="confirm" type="button"> Confirm</button>
-            </form>
-            <div class="visualise">
+                <div class="inputColor" id="primaColor">
+                    <h4>Primary color :</h4>
+                    <input  type="color" value="#0A70FF">
+                </div>
+                <div class="inputColor" id="secondColor">
+                    <h4>Secondary color :</h4>
+                    <input type="color" value="#4A4A4A">
+                </div>
+
+            </span>
+            <section class="visualise">
                 <div class="frame">
                     <div class="frameHeader">
                         <span>From : <strong> You</strong></span>
@@ -68,8 +139,9 @@
                                     <table>
                                         <tr>
                                             <td valign="top" halign="center" width="80px">
-                                                <img id="sign_persoPict" src="./img/defaultUser.png" style=" background-size:cover; border-radius:50%; width:80px;">
-                                                <img id="sign_compaLogo" src="./img/defaultLogo.png" width="80">
+                                                <img id="sign_persoPict" src="./img/default_user.png" style=" background-size:cover; border-radius:50%; width:80px;">
+                                                <img id="sign_compaLogo" src="./img/default_logo.png" width="80">
+                                                <img id="sign_linkedinCompany" src="./img/icon_linkedin_48.png" width="18">
                                             </td>
                                             <td valign="top" class="primaColor" style="border-right:solid 3px; width: 40px;">
                                             <td valign="top">
@@ -79,13 +151,14 @@
                                                     <li id="sign_company" class="secondColor" style="font-size:11pt;">Company</li>
                                                 </ul>
                                                 <ul style="font-size:9pt; list-style-type: none; margin-bottom:0;">
-                                                    <li id="sign_phoneMobile" href="tel:+33412345678" style="color:#0A70FF;">+33 4 12 34 56 78</li>
-                                                    <li id="sign_phoneOffice" href="tel:+33612345678" style="color:#0A70FF;">+33 6 12 34 56 78</li>
-                                                    <li id="sign_email" href="mailto:jdoe@company.com" style="color:#0A70FF;">jdoe@company.com</li>
-                                                    <li id="sign_website" href="https://www.company.com/" style="color:#0A70FF;">www.company.com</li>
+                                                    <li id="sign_phoneMobile"  style="color:#0A70FF;"><a href="tel:+33612345678">+33 6 12 34 56 78</a></li>
+                                                    <li id="sign_phoneOffice"  style="color:#0A70FF;"><a href="tel:+33412345678">+33 4 12 34 56 78</a></li>
+                                                    <li id="sign_email"  style="color:#0A70FF;"><a href="mailto:jdoe@company.com">jdoe@company.com</a></li>
+                                                    <li id="sign_website"  style="color:#0A70FF;"><a href="https://www.company.com/">www.company.com</a></li>
                                                     <li id="sign_input_adressL1">Bâtiment la forge</li>
-                                                    <li id="sign_input_adressL2">68 route de vienne</li>
-                                                    <li id="sign_input_adressL3">69560 Lyon</li>
+                                                    <li id="sign_input_adressL2">3ème étage</li>
+                                                    <li id="sign_input_adressL3">68 route de vienne</li>
+                                                    <li id="sign_zipCity">69560 Lyon</li>
                                                 </ul>
                                           </td>
                                         </tr>
@@ -99,7 +172,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </body>
 </html>

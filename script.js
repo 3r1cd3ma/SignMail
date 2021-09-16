@@ -16,65 +16,66 @@ window.onload = function(){
     internCSS = document.styleSheets[1];
 
     //Listeners
-    document.querySelector('#confirm').addEventListener('click', Transpose); //Click on send button in the details form
-    document.querySelectorAll('.inputReset').forEach(cross => { cross.addEventListener('click',() => {cross.previousSibling.value=null;})}); //At the click on every input reset cross, reset previus input
+    document.querySelectorAll('input').forEach(eleminput => {eleminput.addEventListener('change',()=>{Transpose(eleminput)})});//At the changement of an input value, execute Transpose
+    document.querySelectorAll('.inputReset').forEach(cross => { cross.addEventListener('click',() => { //At the click on every input reset cross, reset previus input
+        cross.previousSibling.value=null;
+        Transpose(cross.previousSibling);
+    })});
+
 };
 
 /* Functions */
 
-///Transposes data entered on the template
-function Transpose(){
 
-    var signElement; //Template current element
+//Transposes data entered on the template
+/*param :
+ - element : current input element 
+*/
+function Transpose(element){
+    
+    var parentElement = element.parentElement.parentElement;
+    var signElement = document.querySelector("#sign_"+parentElement.id.substring(6)); //Get the corresponding template element of the current input
 
-    //Transpose every inputs to the corresponding element of the template
-    form_details.querySelectorAll("input").forEach(element => {
+    if (signElement == null) {return;} //Pass if element noexistent in 
 
-        //Get the corresponding template element of the current input
-        signElement = document.querySelector("#sign_"+element.id.substring(6));
-        if (signElement == null) {return;} //Move to the next element if noexistent
+    //Different execution according to the input type
+    switch(element.type){
+        
+        //Change the HTML syntaxe
+        case "text" :
 
-        //Different execution according to the input type
-        switch(element.type){
-            
-            //Change the HTML syntaxe
-            case "text" :  
+            //Hide if empty or show it
+            if (element.value == '') {signElement.hidden = 1;}
+            else {signElement.hidden = 0;}
 
-                //Hide if empty or show it
-                if (element.value == '') {signElement.hidden = 1;
-                }else{signElement.hidden = 0;}
+            signElement.innerHTML = element.value; //Transpose text
+            break;
 
-                signElement.innerHTML = element.value; //Transpose text
+        //Upload image
+        case "file" :
+
+            //Verifies that an image is selected and show it
+            if(element.files.length==0){ 
+                signElement.hidden = 1;                    
+            }else{
+                signElement.hidden = 0;
                 
-                break;
-
-            //Upload image
-            case "file" :
-
-                //Verifies that an image is selected and show it
-                if(element.files.length==0){ 
-                    signElement.hidden = 1;                    
-                }else{
-                    signElement.hidden = 0;
-                    
-                    //Upload image in base64
-                    const img = signElement; //In a constant because readAsDataURL is asynchrone function.
-                    const reader = new FileReader();
-                    const file = element.files[0];
-                    reader.readAsDataURL(file);
-                    reader.onload = function(e) {img.src = reader.result;}; //Show the img at the end of the loading because readAsDataURL function is asynchrone
-
-                }
-                
-                break;
+                //Upload image in base64
+                const img = signElement; //In a constant because readAsDataURL is asynchrone function.
+                const reader = new FileReader();
+                const file = element.files[0];
+                reader.readAsDataURL(file);
+                reader.onload = function(e) {img.src = reader.result;}; //Show the img at the end of the loading because readAsDataURL function is asynchrone
+            }
             
-            //Change intern CSS color values
-            case "color":
-                internCSS.cssRules[0].style.color = primaColor.value;
-                internCSS.cssRules[0].style.borderColor = primaColor.value;
-                internCSS.cssRules[1].style.color = secondColor.value;
-                break;
+            break;
+        
+        //Change intern CSS color values
+        case "color":
+            internCSS.cssRules[0].style.color = primaColor.value;
+            internCSS.cssRules[0].style.borderColor = primaColor.value;
+            internCSS.cssRules[1].style.color = secondColor.value;
+            break;
 
-        }
-    });
+    }
 }

@@ -90,11 +90,11 @@ function Transpose(element){
         case "color":
             switch (parentElement.id){
                 case "primaColor" :
-                    document.querySelectorAll(".primaColor").forEach(elem => {elem.style.color = element.value});
-                    document.querySelectorAll(".primaBorder").forEach(elem => {elem.style.borderColor = element.value});
+                    document.querySelectorAll(".primaColor").forEach(elem => {elem.style.color = element.value}); //Change font color of each element with primaColor Class
+                    document.querySelectorAll(".primaBorder").forEach(elem => {elem.style.borderColor = element.value}); //Change border color of each element with primaBorder Class
                     break;
                 case "secondColor" :
-                    document.querySelectorAll(".secondColor").forEach(elem => {elem.style.color = element.value});
+                    document.querySelectorAll(".secondColor").forEach(elem => {elem.style.color = element.value}); //Change font color of each element with secondColor Class
                     break;
             }
 

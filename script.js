@@ -81,7 +81,7 @@ function Transpose(element){
                 const reader = new FileReader();
                 const file = element.files[0];
                 reader.readAsDataURL(file);
-                reader.onload = function(e) {img.src = reader.result;}; //Show the img at the end of the loading because readAsDataURL function is asynchrone
+                reader.onload = function(e) {img.src = reader.result;}; //Show the img at the end of the loading
             }
             
             break;

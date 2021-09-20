@@ -71,11 +71,14 @@ function Transpose(element){
 
         //Upload image
         case "url" :
-
             //Verifies that an image is selected and show it
-            if(element.value == '') {signElement.hidden = 1;}                
-            else{
+            if(element.value == '') { //Hide it
+                signElement.hidden = 1;
+                signElement.parentElement.parentElement.nextElementSibling.hidden = 1;
+            }                
+            else{ //Show it
                 signElement.hidden = 0;
+                signElement.parentElement.parentElement.nextElementSibling.hidden = 0;
                 signElement.src = element.value;//Upload image
             }
             

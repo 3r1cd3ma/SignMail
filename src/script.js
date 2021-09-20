@@ -70,20 +70,13 @@ function Transpose(element){
             break;
 
         //Upload image
-        case "file" :
+        case "url" :
 
             //Verifies that an image is selected and show it
-            if(element.files.length==0){ 
-                signElement.hidden = 1;                    
-            }else{
+            if(element.value == '') {signElement.hidden = 1;}                
+            else{
                 signElement.hidden = 0;
-                
-                //Upload image in base64
-                const img = signElement; //In a constant because readAsDataURL is asynchrone function.
-                const reader = new FileReader();
-                const file = element.files[0];
-                reader.readAsDataURL(file);
-                reader.onload = function(e) {img.src = reader.result;}; //Show the img at the end of the loading
+                signElement.src = element.value;//Upload image
             }
             
             break;

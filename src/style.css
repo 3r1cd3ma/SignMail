@@ -24,6 +24,8 @@ h4{margin: 20px 0 0}
     padding: 0 3rem;
 }
 
+#details div{position: relative;}
+
 .inputDetail{position: relative;}
 
 .inputDetail span {
@@ -116,3 +118,55 @@ h4{margin: 20px 0 0}
 }
 
 #emailSign{margin-top: 10px;}
+
+/* Tooltip container */
+.tooltip{
+    position: absolute;
+    display: flex;
+    top: 0px;
+    right: 0px;
+    background-color: hsl(268, 100%, 47%);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 1.1rem;
+    height: 1.1rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    line-height: 0.75rem;
+}
+
+/* Tooltip text */
+.tooltip_txt {
+    visibility: hidden;
+    width: 200px;
+    background-color: #fff;
+    color: #33475b;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 5px;
+    border-radius: 3px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    right: 150%;
+}
+
+.tooltiptext::after {
+    content: "rhtrhtrh";
+    position: absolute;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltip_txt {
+    visibility: visible;
+}

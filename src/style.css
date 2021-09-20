@@ -1,0 +1,118 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+}
+
+h2{margin: 40px 0 0}
+h4{margin: 20px 0 0}
+
+#details{
+    order: 1;
+    top : 0px;
+    left : 0px;
+    background-color: #33475b;
+    width: 18%;
+    max-width: 450px;
+    overflow-y: scroll;
+    color: #fff;
+    padding: 0 3rem;
+}
+
+.inputDetail{position: relative;}
+
+.inputDetail span {
+    position: absolute;
+    line-height: 40px;
+    margin-left: 0.25em;
+    cursor: pointer;
+}
+
+.inputDetail input{
+    display: inline-block;
+    width: 100%;
+    text-indent: 8px;
+    padding: 0.5rem 0px;
+    border-color: currentColor currentColor #fff;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    background-color: transparent;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.inputColor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin : 20px 0;
+}
+.inputColor h4{margin : 0;}
+
+.inputColor input{
+    margin-left: 0.5rem;
+    width: 3rem;
+    border: 3px solid #fff;
+    padding: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.visualise{
+    order: 2;
+    flex: 1;
+    background-color: hsl(268, 100%, 47%);
+    display: flex;
+    overflow-y:auto;
+}
+
+.frame{
+    position: relative;
+    margin: auto;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.buttonsLine{
+    display: flex;
+    position: relative;
+    margin: 3rem 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.primaBtn{
+    width:10rem;
+    text-align: center;
+
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #33475b;
+    cursor: pointer;
+}
+
+.frameHeader{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #33475b;
+    border-radius: 8px 8px 0 0;
+    border-style : none;
+}
+
+.frameBody{
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    padding: 1rem 2rem;
+}
+
+#emailSign{margin-top: 10px;}

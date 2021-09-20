@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="script.js"></script>
+        <link href="style.css" type="text/css" rel="stylesheet" /> 
+    </head>
+    <body>
+        <a href="https://github.com/3r1cd3ma/SignMail">
+            <img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149" style="position:absolute; top:0; right:0;" alt="Fork me on GitHub">
+        </a>
+        <div class="container">
+            
+            <span id="details" >
+                <h2>Enter your details</h2>
+                <div id="input_fullName">
+                    <h4>Full name :</h4>
+                    <div class="inputDetail"><input type="text" value="John Doe"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_jobTitle">
+                    <h4>Job title  :</h4>
+                    <div class="inputDetail"><input type="text" value="Founder & CEO"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_company">
+                    <h4>Company name :</h4>
+                    <div class="inputDetail"><input type="text" value="Company"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_phoneMobile">
+                    <h4>Mobile phone :</h4>
+                    <div class="inputDetail"><input type="text" value="+33 6 12 34 56 78"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_phoneOffice">
+                    <h4>Office phone :</h4>
+                    <div class="inputDetail"><input type="text" value="+33 4 12 34 56 78"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_email">
+                    <h4>Email Address :</h4>
+                    <div class="inputDetail"><input type="text" value="jdoe@company.com"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_website">
+                    <h4>Website URL :</h4>
+                    <div class="inputDetail"><input type="text" value="https://www.company.eu"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_adressL1">
+                    <h4>Address Line 1 :</h4>
+                    <div class="inputDetail"><input type="text" value="Bâtiment la forge"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_adressL2">
+                    <h4>Address Line 2 :</h4>
+                    <div class="inputDetail"><input type="text" value="3ème étage"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_adressL3">
+                    <h4>Address Line 3</h4>
+                    <div class="inputDetail"><input type="text" value="68 route de vienne"><span class="inputReset">×</span></div>
+                </div>
+                <div id="input_zipCity">
+                    <h4>ZIP Code & City :</h4>
+                    <div class="inputDetail"><input type="text" value="69560 Lyon"><span class="inputReset">×</span></div>
+                </div>
+
+                <h2>Upload your images</h2>
+                <div id ="input_persoPict" >
+                    <h4>Profile picture :</h4>
+                    <div class="inputDetail"><input type="file" accept=".jpg,.jpeg,.png" value="./img/default_user.png"><span class="inputReset">×</span></div>
+                </div>
+                <div id ="input_compaLogo">
+                    <h4>Company logo :</h4>
+                    <div class="inputDetail"><input type="file" accept=".jpg,.jpeg,.png" value="./img/default_logo.png"><span class="inputReset">×</span></div>
+                </div>
+
+                <h2>Select colors</h2>
+                <div class="inputColor" id="primaColor">
+                    <h4>Primary color :</h4>
+                    <div><input  type="color" value="#0A70FF"></div>
+                </div>
+                <div class="inputColor" id="secondColor">
+                    <h4>Secondary color :</h4>
+                    <div><input type="color" value="#4A4A4A"></div>
+                </div>
+
+            </span>
+            <section class="visualise">
+                <div class="frame">
+                    <div class="frameHeader">
+                        <span>From : <strong> You</strong></span>
+                        <span>To : <strong> Your Recipient</strong></span>
+                        <span>Subject : <strong> A very nice email signature</strong></span>
+                    </div>
+                    <div class="frameBody">
+                        Hello, <br>
+                        I'm happy to show you my new awesome email signature !!!<br>
+                        Best regards,
+
+
+                        <!-- Signature email -->
+                        <div id="emailSign">
+                            <html>
+                                <head>
+                                    <meta charset="utf-8">
+                                </head>
+                                <body>
+                                    <table>
+                                        <tr>
+                                            <td valign="top" halign="center" width=80>
+                                                <table>
+                                                    <tr><td><img id="sign_persoPict" src="./img/default_user.png" width="80" height="80"></td></tr>
+                                                    <tr height=10></tr>
+                                                    <tr><td><img id="sign_compaLogo" src="./img/default_logo.png" width="80" height="80"></td></tr>
+                                                </table>
+                                            </td>
+                                            <td valign="top" class="primaBorder" width="20" style="border-right:solid 3px; border-color: #0A70FF; Margin:0;">
+                                            <td width="20"></td>
+                                            <td valign="top">
+                                                <div style="line-height:1.3; font-size:16px;">
+                                                    <div id="sign_fullName" class="primaColor" style="font-size:20px; font-weight:bold; color:#0A70FF">John Do</div>
+                                                    <div id="sign_jobTitle" class="secondColor" style="font-weight:bold; color: #4A4A4A;">Founder &amp; CEO</div>
+                                                    <div id="sign_company" class="secondColor" style="color: #4A4A4A;">Company</div>
+                                                </div>
+                                                <table style="font-size:12px;" cellspacing="0" cellpadding="0">
+                                                    <tr height=10></tr>
+                                                    <tr><td id="sign_phoneMobile"><a href="tel:+33612345678">+33 6 12 34 56 78</a></td></tr>
+                                                    <tr><td id="sign_phoneOffice"><a href="tel:+33412345678">+33 4 12 34 56 78</a></td></tr>
+                                                    <tr><td id="sign_email"><a href="mailto:jdoe@company.com">jdoe@company.com</a></td></tr>
+                                                    <tr><td id="sign_website"><a href="https://www.company.com/">www.company.com</a></td></tr>
+                                                    <tr><td id="sign_input_adressL1">Bâtiment la forge</td></tr>
+                                                    <tr><td id="sign_input_adressL2">3ème étage</td></tr>
+                                                    <tr><td id="sign_input_adressL3">68 route de vienne</td></tr>
+                                                    <tr><td id="sign_zipCity">69560 Lyon</td></tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </body>
+                            </html>
+                        </div>
+                    </div>
+                    <div class="buttonsLine"><span id="btn_copy" class="primaBtn">Copy to clipboard</span></div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

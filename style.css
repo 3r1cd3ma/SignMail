@@ -77,7 +77,25 @@ h4{margin: 20px 0 0}
     margin: auto;
     width: 80%;
     border-radius: 8px;
+}
 
+.buttonsLine{
+    display: flex;
+    position: relative;
+    margin: 3rem 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.primaBtn{
+    width:10rem;
+    text-align: center;
+
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #33475b;
+    cursor: pointer;
 }
 
 .frameHeader{
@@ -88,6 +106,7 @@ h4{margin: 20px 0 0}
     color: #fff;
     background-color: #33475b;
     border-radius: 8px 8px 0 0;
+    border-style : none;
 }
 
 .frameBody{

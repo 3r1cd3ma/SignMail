@@ -21,6 +21,8 @@ window.onload = function(){
         Transpose(cross.previousSibling);
     })});
 
+    document.querySelector('#btn_copy').addEventListener('click',CopySignature); //At the click on the copy button
+
 };
 
 /* Functions */
@@ -97,7 +99,29 @@ function Transpose(element){
                     document.querySelectorAll(".secondColor").forEach(elem => {elem.style.color = element.value}); //Change font color of each element with secondColor Class
                     break;
             }
-
             break;
+    }
+}
+
+/*
+ * Copy the email signature in the clipboard
+ */
+function CopySignature(){
+    var elem = document.querySelector('#emailSign'); //Get the div with email signature
+    var range = document.createRange();
+    var selection = window.getSelection();
+
+
+    //Add the div in the selection
+    range.selectNode(elem);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    
+    //Write in the clipboard
+    try{
+        var result = document.execCommand('copy');
+        if(result){alert("The signature has been copied");}
+    }catch(err){
+        alert(err);
     }
 }

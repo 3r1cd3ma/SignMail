@@ -39,11 +39,16 @@ function Transpose(element){
 
     if(element.type!='color' & signElement==null){return} //Verifies exist
 
-    //Different execution according to the input type
-    switch(element.type){
-        
+    switch(true){
+        case parentElement.classList.contains("sm-sn"): //Social networks
+            if (element.value == '') {signElement.parentElement.hidden = 1;}
+            else {signElement.parentElement.hidden = 0;}
+
+            signElement.href=element.value;
+            break;
+
         //Change the HTML syntaxe
-        case "text" :
+        case parentElement.classList.contains("sm-txt") :
 
             //Hide if empty or show it
             if (element.value == '') {signElement.hidden = 1;}
@@ -70,7 +75,7 @@ function Transpose(element){
             break;
 
         //Upload image
-        case "url" :
+        case parentElement.classList.contains("sm-img") :
             //Verifies that an image is selected and show it
             if(element.value == '') { //Hide it
                 signElement.hidden = 1;
@@ -85,7 +90,7 @@ function Transpose(element){
             break;
         
         //Change intern CSS color values
-        case "color":
+        case parentElement.classList.contains("sm-col") :
             switch (parentElement.id){
                 case "primaColor" :
                     document.querySelectorAll(".primaColor").forEach(elem => {elem.style.color = element.value}); //Change font color of each element with primaColor Class

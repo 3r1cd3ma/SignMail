@@ -13,53 +13,71 @@
             
             <span id="details" >
                 <h2>Enter your details</h2>
-                <div id="input_fullName">
+                <div id="input_fullName" class="sm-txt">
                     <h4>Full name :</h4>
                     <div class="inputDetail"><input type="text" value="John Doe"><span class="inputReset">×</span></div>
                 </div>
-                <div id="input_jobTitle">
+                <div id="input_jobTitle" class="sm-txt">
                     <h4>Job title  :</h4>
                     <div class="inputDetail"><input type="text" value="Founder & CEO"><span class="inputReset">×</span></div>
                 </div>
-                <div id="input_company">
+                <div id="input_company" class="sm-txt">
                     <h4>Company name :</h4>
                     <div class="inputDetail"><input type="text" value="Company"><span class="inputReset">×</span></div>
                 </div>
-                <div id="input_phoneMobile">
+                <div id="input_phoneMobile" class="sm-txt">
                     <h4>Mobile phone :</h4>
                     <div class="inputDetail"><input type="text" value="+33 6 12 34 56 78"><span class="inputReset">×</span></div>
                 </div>
-                <div id="input_phoneOffice">
+                <div id="input_phoneOffice" class="sm-txt">
                     <h4>Office phone :</h4>
                     <div class="inputDetail"><input type="text" value="+33 4 12 34 56 78"><span class="inputReset">×</span></div>
                 </div>
-                <div id="input_email">
+                <div id="input_email" class="sm-txt">
                     <h4>Email Address :</h4>
                     <div class="inputDetail"><input type="text" value="jdoe@company.com"><span class="inputReset">×</span></div>
                 </div>
-                <div id="input_website">
+                <div id="input_website" class="sm-txt">
                     <h4>Website URL :</h4>
                     <div class="inputDetail"><input type="text" value="https://www.company.eu"><span class="inputReset">×</span></div>
                 </div>
-                <div id="input_adressL1">
+                <div id="input_adressL1" class="sm-txt">
                     <h4>Address Line 1 :</h4>
                     <div class="inputDetail"><input type="text" value="Bâtiment la forge"><span class="inputReset">×</span></div>
                 </div>
-                <div id="input_adressL2">
+                <div id="input_adressL2" class="sm-txt">
                     <h4>Address Line 2 :</h4>
                     <div class="inputDetail"><input type="text" value="3ème étage"><span class="inputReset">×</span></div>
                 </div>
-                <div id="input_adressL3">
+                <div id="input_adressL3" class="sm-txt">
                     <h4>Address Line 3</h4>
                     <div class="inputDetail"><input type="text" value="68 route de vienne"><span class="inputReset">×</span></div>
                 </div>
-                <div id="input_zipCity">
+                <div id="input_zipCity" class="sm-txt">
                     <h4>ZIP Code & City :</h4>
                     <div class="inputDetail"><input type="text" value="69560 Lyon"><span class="inputReset">×</span></div>
                 </div>
 
+                <h2>Social networks</h2>
+                <div id ="input_linkedin" class="sm-sn">
+                    <h4>Linkedin :</h4>
+                    <div class="inputDetail"><input type="url" placeholder="https://www.linkedin.com" value="https://www.linkedin.com"><span class="inputReset">×</span></div>
+                </div>
+                <div id ="input_facebook" class="sm-sn">
+                    <h4>Facebook :</h4>
+                    <div class="inputDetail"><input type="url" placeholder="https://www.facebook.com" value="https://www.facebook.com"><span class="inputReset">×</span></div>
+                </div>
+                <div id ="input_instagram" class="sm-sn">
+                    <h4>Instagram :</h4>
+                    <div class="inputDetail"><input type="url" placeholder="https://www.instagram.com" value="https://www.instagram.com"><span class="inputReset">×</span></div>
+                </div>
+                <div id ="input_twitter" class="sm-sn">
+                    <h4>Twitter :</h4>
+                    <div class="inputDetail"><input type="url" placeholder="https://www.twitter.com" value="https://www.twitter.com"><span class="inputReset">×</span></div>
+                </div>
+
                 <h2>Your images</h2>
-                <div id ="input_persoPict" >
+                <div id ="input_persoPict" class="sm-img" >
                     <h4>Profile picture URL :</h4>
                     <div class="inputDetail"><input type="url" placeholder="https://drive.google.com/uc?export=view&id="><span class="inputReset">×</span></div>
                     <span class="tooltip">
@@ -68,7 +86,7 @@
                     </span>
                 </div>
 
-                <div id ="input_compaLogo">
+                <div id ="input_compaLogo" class="sm-img">
                     <h4>Company logo URL :</h4>
                     <div class="inputDetail"><input type="url" placeholder="hhttps://drive.google.com/uc?export=view&id="><span class="inputReset">×</span></div>
                     <span class="tooltip">
@@ -78,11 +96,11 @@
                 </div>
 
                 <h2>Select colors</h2>
-                <div class="inputColor" id="primaColor">
+                <div class="sm-col inputColor" id="primaColor">
                     <h4>Primary color :</h4>
                     <div><input  type="color" value="#0A70FF"></div>
                 </div>
-                <div class="inputColor" id="secondColor">
+                <div class="sm-col inputColor" id="secondColor">
                     <h4>Secondary color :</h4>
                     <div><input type="color" value="#4A4A4A"></div>
                 </div>
@@ -111,11 +129,39 @@
                                     <table>
                                         <tr>
                                             <td valign="top" halign="center" width=80>
-                                                <table>
+                                                <table width="100%" style="text-align: center;">
                                                     <tr><td><img id="sign_persoPict" src="./img/default_user.png" width="80" height="auto"></td></tr>
                                                     <tr height=10></tr>
                                                     <tr><td><img id="sign_compaLogo" src="./img/default_logo.png" width="80" height="auto"></td></tr>
                                                     <tr height=10></tr>
+                                                    <tr>
+                                                        <td>
+                                                            <table style="display: inline-block;">
+                                                                <tr>
+                                                                    <td Width="20">
+                                                                        <a id="sign_linkedin" href="https://www.linkedin.com">
+                                                                            <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-20.png"/>
+                                                                        </a>        
+                                                                    </td>
+                                                                    <td>
+                                                                        <a id="sign_facebook" href="https://www.facebook.com">
+                                                                            <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-20.png"/>
+                                                                        </a>        
+                                                                    </td>
+                                                                    <td>
+                                                                        <a id="sign_instagram" href="https://www.instagram.com">
+                                                                            <img src="https://cdn2.iconfinder.com/data/icons/social-network-30/512/social-03-20.png"/>
+                                                                        </a>        
+                                                                    </td>
+                                                                    <td>
+                                                                        <a id="sign_twitter" href="https://www.twitter.com">
+                                                                            <img src="https://cdn2.iconfinder.com/data/icons/iconsimple-logotypes/512/twitter-20.png"/>
+                                                                        </a>        
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
                                                 </table>
                                             </td>
                                             <td valign="top" class="primaBorder" width="20" style="border-right:solid 3px; border-color: #0A70FF; Margin:0;">

@@ -43,7 +43,6 @@ function Transpose(element){
         case parentElement.classList.contains("sm-sn"): //Social networks
             if (element.value == '') {signElement.parentElement.hidden = 1;}
             else {signElement.parentElement.hidden = 0;}
-
             signElement.href=element.value;
             break;
 
@@ -78,12 +77,12 @@ function Transpose(element){
         case parentElement.classList.contains("sm-img") :
             //Verifies that an image is selected and show it
             if(element.value == '') { //Hide it
-                signElement.hidden = 1;
+                signElement.parentElement.parentElement.hidden = 1;
                 signElement.parentElement.parentElement.nextElementSibling.hidden = 1;
             }                
             else{ //Show it
-                signElement.hidden = 0;
                 signElement.parentElement.parentElement.nextElementSibling.hidden = 0;
+                signElement.parentElement.parentElement.hidden = 0;
                 signElement.src = element.value;//Upload image
             }
             

@@ -32,6 +32,10 @@ See the [project board](https://github.com/3r1cd3ma/SignMail/projects) for the s
 SignMail does not require any particular configuration as it is based on the HTML/CSS/JS.
 To use SignMail on your machine, just download the files and run the index.html file.
 
+## Components
+ - Toast JS library :  [Notyf](http://carlosroso.com/notyf/)
+ - Icons CDN : [Icon Fincder](https://iconfinder.com)
+
 ## Demo
 
 You can use the latest version of SignMail on [signmail.numio.eu](signmail.numio.eu)

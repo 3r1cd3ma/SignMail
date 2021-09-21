@@ -1,7 +1,14 @@
 /* Variables */
 var form_details; //DOM element of the details form
-var signDOM;
-var internCSS;
+var signDOM; //DOM element of the signature template
+
+const notyf = new Notyf({ //Toast notification
+    duration: 3000,
+    position: {
+      x: 'right',
+      y: 'bottom',
+    }
+});
 
 /* Initialisation */
 window.onload = function(){
@@ -9,7 +16,6 @@ window.onload = function(){
     //Get elements after load
     form_details = document.querySelector("#details");
     signDOM = document.querySelector("#emailSign");
-    internCSS = document.styleSheets[1];
 
     document.querySelectorAll('input').forEach(eleminput => {
         eleminput.addEventListener('change',()=>{Transpose(eleminput)}) //Add on change listener for execute Transpose function
@@ -120,8 +126,8 @@ function CopySignature(){
     //Write in the clipboard
     try{
         var result = document.execCommand('copy');
-        if(result){alert("The signature has been copied");}
+        if(result){notyf.success("The signature has been copied");}
     }catch(err){
-        alert(err);
+        notyf.error(err);
     }
 }
